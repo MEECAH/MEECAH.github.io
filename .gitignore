@@ -114,3 +114,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+48871598_192.168.1.28000.cert
+48871598_192.168.1.28000.key
