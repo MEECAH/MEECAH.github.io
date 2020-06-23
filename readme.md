@@ -21,7 +21,7 @@ AR.js and A-Frame are libraries that we'll be using for this project, this is a 
 
 Note: This project currently uses the express framework for local development. Because the project is primarily intended to be used on mobile phones and not laptop it is configured to require https, this is required by most mobile browsers in order to be able to request camera permission. So, we'll briefly need to hack together some fake certificates.
 
-5) First you need to know your development computer's local ip on your home network. Open a command prompt and type ipconfig, you want the number that comes up under 'ipv4' 
+5) First you need to know your development computer's local ip on your home network. Open a command prompt and type ```ipconfig```, you want the number that comes up under 'ipv4' 
 
 ![](https://i.imgur.com/pBylBm6.png)
 
