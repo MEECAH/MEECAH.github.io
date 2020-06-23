@@ -29,9 +29,11 @@ Note: This project currently uses the express framework for local development. B
 
 ![](https://i.imgur.com/6P99jv2.png)
 
-7)  Add the .key and .cert files' paths to the app.js file on lines 13 and 14 like this: 
+7)  Store them in the project directory, add the .key and .cert files' relative paths to the app.js file on lines 20 and 21 like this: 
 
-![](https://i.imgur.com/FzuOA2T.png)
+![](https://i.imgur.com/O87kbJe.png)
+
+![](https://i.imgur.com/hgphSZ2.png)
 
 This should be the last step of setup.
 
