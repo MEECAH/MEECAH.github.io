@@ -63,7 +63,9 @@ Currently the bulk of the code at work lives in index.html, which in this config
 
 ## Acknowledgements
 
-the code in index.html was written using tutorial resources from:
+This setup guide was compiled and written by [Micah Haycraft](https://github.com/MEECAH).
+
+The code in index.html was written using tutorial resources from:
 
 1) [https://ar-js-org.github.io/AR.js-Docs/](https://ar-js-org.github.io/AR.js-Docs/)
 2) [https://aframe.io/docs/1.0.0/introduction/](https://aframe.io/docs/1.0.0/introduction/)
