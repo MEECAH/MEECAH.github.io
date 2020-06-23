@@ -1,7 +1,7 @@
 {
   "name": "meecah.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "AR.js and A-Frame are libraries that we'll be using for this project, this is a short guide on how to get an environment set up so you can begin development.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,6 @@
   "homepage": "https://github.com/MEECAH/MEECAH.github.io#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {}
 }
