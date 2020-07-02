@@ -9,6 +9,10 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/location', function(req, res) {
+  res.sendFile(path.join(__dirname + '/location.html'));
+});
+
 https.createServer({
   key: fs.readFileSync(__dirname + '/48871598_192.168.1.28000.key'),
   cert: fs.readFileSync(__dirname + '/48871598_192.168.1.28000.cert')

@@ -1,0 +1,88 @@
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  <script>
+    window.onload = function () {
+      document
+        .querySelector(".my-button")
+        .addEventListener("click", function () {
+          window.location.href = "/";
+        });
+    };
+  </script>
+  <style>
+    .buttons {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .my-button {
+      padding: 0.25em;
+      border-radius: 4px;
+      border: none;
+      background: white;
+      color: black;
+    }
+  </style>
+
+  <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+
+    <div class="buttons">
+      <button class="my-button">Interact With A Marker</button>
+    </div>
+
+    <a-scene
+    vr-mode-ui="enabled: false;" 
+    embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+            <a-image
+            src="https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png"
+            look-at="[gps-camera]"
+            scale="3 3 3"
+            gps-entity-place="latitude: 35.9114784; longitude: -79.0606283;"
+            opacity = .5
+            >
+                <a-text
+                value = "Cha House"
+                position = "-.25 .8 0"
+                >    
+                </a-text>
+            </a-image>
+
+            <a-image
+            src="https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png"
+            look-at="[gps-camera]"
+            scale="3 3 3"
+            gps-entity-place="latitude: 35.9111141; longitude: -79.0605863;"
+            >
+                <a-text
+                value = "Perennial"
+                position = "-.25 .8 0"
+                >    
+                </a-text>
+            </a-image>
+
+            <a-image
+            src="https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png"
+            look-at="[gps-camera]"
+            scale="3 3 3"
+            gps-entity-place="latitude: 35.9117317; longitude: -79.0597375;"
+            >
+                <a-text
+                value = "Purple Bowl"
+                position = "-.25 .8 0"
+                >    
+                </a-text>
+            </a-image>
+        <a-camera gps-camera rotation-reader> </a-camera>
+    </a-scene>
+  </body>
+</html>
