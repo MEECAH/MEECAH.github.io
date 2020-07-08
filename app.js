@@ -9,8 +9,8 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/location', function(req, res) {
-  res.sendFile(path.join(__dirname + '/location.html'));
+app.get('/about', function(req, res) {
+  res.sendFile(path.join(__dirname + '/about.html'));
 });
 
 https.createServer({
