@@ -11,6 +11,24 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-172973285-1');
+
+    AFRAME.registerComponent('registerevents', {
+		init: function () {
+			var marker = this.el;
+
+			// Make the element emit events when found and when lost.
+			marker.setAttribute('emitevents', 'true');
+
+			marker.addEventListener('markerFound', function() {
+				gtag('event', 'Marker Found', {
+        });
+			});
+
+			marker.addEventListener('markerLost', function() {
+				console.log('marker lost');
+			});
+		}
+	});
   </script>
 
   <script>
@@ -238,25 +256,6 @@
           }
 
     };
-
-    AFRAME.registerComponent('registerevents', {
-		init: function () {
-			var marker = this.el;
-
-			// Make the element emit events when found and when lost.
-			marker.setAttribute('emitevents', 'true');
-
-			marker.addEventListener('markerFound', function() {
-				console.log('marker found')
-			});
-
-			marker.addEventListener('markerLost', function() {
-				var markerId = marker.id;
-				console.log('markerLost', markerId);
-				// TODO: Add your own code here to react to the marker being lost.
-			});
-		}
-	});
 
     //this sends users to a static web page with project/team details
 
