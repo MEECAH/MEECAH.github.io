@@ -1,9 +1,25 @@
 <html>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-172973285-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
   <script>
+
+    //new location markers can be added by copy and pasting the <a-image> entities
+    //and filling in with appropriate lat, long, and business name
 
     let locationCode =  `
     <div class="buttons">
@@ -19,8 +35,22 @@
             src="https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png"
             look-at="[gps-camera]"
             scale="3 3 3"
-            gps-entity-place="latitude: 35.904778; longitude: -79.068517;"
-            opacity = .5
+            gps-entity-place="latitude: 35.904809; longitude: -79.068650;"
+            opacity = .9
+            >
+                <a-text
+                value = "Micah's Neighbor"
+                position = "-.25 .8 0"
+                >    
+                </a-text>
+            </a-image>
+
+            <a-image
+            src="https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png"
+            look-at="[gps-camera]"
+            scale="3 3 3"
+            gps-entity-place="latitude: 35.9114784; longitude: -79.0606283;"
+            opacity = .9
             >
                 <a-text
                 value = "Cha House"
@@ -33,20 +63,8 @@
             src="https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png"
             look-at="[gps-camera]"
             scale="3 3 3"
-            gps-entity-place="latitude: 35.9111141; longitude: -79.0605863;"
-            >
-                <a-text
-                value = "Perennial"
-                position = "-.25 .8 0"
-                >    
-                </a-text>
-            </a-image>
-
-            <a-image
-            src="https://cdn4.iconfinder.com/data/icons/basic-ui-pack-flat-s94-1/64/Basic_UI_Icon_Pack_-_Flat_map_pointer-512.png"
-            look-at="[gps-camera]"
-            scale="3 3 3"
             gps-entity-place="latitude: 35.90449523925781; longitude: -79.06790924072266;"
+            opacity = .9
             >
                 <a-text
                 value = "Purple Bowl"
@@ -59,6 +77,8 @@
     </a-scene>
     `;
 
+    //the following string should be the same as the default <body> content on page load.
+
     let markerCode =  `
     <div class="buttons">
       <button class="my-button" onclick="toggleMode()">Find More Markers</button>
@@ -68,23 +88,10 @@
       <a-scene
       vr-mode-ui="enabled: false;" 
       embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-        <!-- handle unknown marker -->
-        <!-- <a-marker type='unknown'>
-          <a-box depth="1" height="1" width="1" position='0 0.5 0' material='opacity: 0.5; side:double; color:blue;'></a-box>
-        </a-marker> -->
 
         <!-- handle hiro marker -->
         <a-marker preset='hiro'>
           <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
-            <a-torus-knot radius='0.26' radius-tubular='0.05'
-            animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
-            </a-torus-knot>
-          </a-box>
-        </a-marker>
-    
-        <!-- handle matrix marker -->
-        <a-marker type='barcode' value='5'>
-          <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
             <a-torus-knot radius='0.26' radius-tubular='0.05'
             animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
             </a-torus-knot>
@@ -99,11 +106,28 @@
             </a-torus-knot>
           </a-box>
         </a-marker>
+
+        <!-- handle custom CARVR marker -->
+        <a-marker type='pattern' url='https://raw.githubusercontent.com/carolina-ar-vr/Franklin-AR/erevis-branch/pattern-CARVR_MARKER.patt?token=AKGM3KSNGH3FE7OC5DHVX4S67U5U2'>
+          <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
+            <a-torus-knot radius='0.26' radius-tubular='0.05'
+            animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
+            </a-torus-knot>
+          </a-box>
+        </a-marker>
     
         <!-- add a simple camera -->
         <a-entity camera></a-entity>
       </a-scene>
     `;
+
+    function initialize() {
+
+      let main = document.getElementById("main");
+      main.innerHTML = markerCode;
+    }
+
+    //this function enables toggling of AR modes by button press
 
     function toggleMode() {
 
@@ -118,6 +142,8 @@
           }
 
     };
+
+    //this sends users to a static web page with project/team details
 
     function redirect() {
       window.location.href = "about";
@@ -152,53 +178,9 @@
   
   </style>
 
-  <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+  <body style='margin : 0px; overflow: hidden; font-family: Monospace;' onload="initialize()">
 
     <div id="main" class="default">
-
-    <div class="buttons">
-      <button class="my-button" onclick="toggleMode()">Find More Markers</button>
-      <button class="my-button" onclick="redirect()">App Website</button>
-    </div>
-
-      <a-scene
-      vr-mode-ui="enabled: false;" 
-      embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-        <!-- handle unknown marker -->
-        <!-- <a-marker type='unknown'>
-          <a-box depth="1" height="1" width="1" position='0 0.5 0' material='opacity: 0.5; side:double; color:blue;'></a-box>
-        </a-marker> -->
-
-        <!-- handle hiro marker -->
-        <a-marker preset='hiro'>
-          <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
-            <a-torus-knot radius='0.26' radius-tubular='0.05'
-            animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
-            </a-torus-knot>
-          </a-box>
-        </a-marker>
-    
-        <!-- handle matrix marker -->
-        <a-marker type='barcode' value='5'>
-          <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
-            <a-torus-knot radius='0.26' radius-tubular='0.05'
-            animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
-            </a-torus-knot>
-          </a-box>
-        </a-marker>
-    
-        <!-- handle kanji marker -->
-        <a-marker preset='kanji'>
-          <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
-            <a-torus-knot radius='0.26' radius-tubular='0.05'
-            animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
-            </a-torus-knot>
-          </a-box>
-        </a-marker>
-    
-        <!-- add a simple camera -->
-        <a-entity camera></a-entity>
-      </a-scene>
 
     </div>
 
