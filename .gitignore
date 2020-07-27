@@ -116,3 +116,10 @@ dist
 .pnp.*
 48871598_192.168.1.28000.cert
 48871598_192.168.1.28000.key
+image_tracking.html
+dog_descriptors/dog.iset
+dog_descriptors/dog_descriptors.iset
+marker_tracking.html
+places.txt
+sayhi.html
+dog_descriptors/dog_descriptors.iset
