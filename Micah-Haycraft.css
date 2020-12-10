@@ -1,0 +1,257 @@
+.u-section-1 {
+  background-image: linear-gradient(#e9f2fa, #c6cbd3);
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 671px;
+}
+
+.u-section-1 .u-group-1 {
+  width: 646px;
+  min-height: 564px;
+  box-shadow: 0 0 27px 0 rgba(0,0,0,0.5);
+  height: auto;
+  animation-duration: 1000ms;
+  margin: 54px auto;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 26px 30px 0;
+}
+
+.u-section-1 .u-image-1 {
+  width: 233px;
+  height: 233px;
+  animation-duration: 1000ms;
+  margin: 1px auto 0;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 33px 0 0;
+}
+
+.u-section-1 .u-text-2 {
+  line-height: 1.4;
+  width: 411px;
+  margin: 21px auto 0;
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-group-1 {
+    width: 540px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-group-1 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 1.5rem;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: 320px;
+  }
+}.u-section-2 {
+  background-image: linear-gradient(#c6cbd3, #e9f2fa);
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 802px;
+}
+
+.u-section-2 .u-layout-wrap-1 {
+  margin-top: 75px;
+  margin-bottom: 60px;
+}
+
+.u-section-2 .u-image-1 {
+  min-height: 315px;
+  background-image: url("images/bokeh-1.jpg");
+}
+
+.u-section-2 .u-image-2 {
+  background-image: url("images/bokeh-1.jpg");
+  background-position: 50% 27.58%;
+}
+
+.u-section-2 .u-container-layout-1 {
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  padding: 30px;
+}
+
+.u-section-2 .u-layout-cell-2 {
+  min-height: 315px;
+}
+
+.u-section-2 .u-container-layout-2 {
+  padding: 30px 60px;
+}
+
+.u-section-2 .u-text-1 {
+  margin: 37px 0 0;
+}
+
+.u-section-2 .u-text-2 {
+  line-height: 1;
+  margin: 20px 0 0;
+}
+
+.u-section-2 .u-btn-1 {
+  border-style: solid;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 0;
+  margin-right: auto;
+  animation-duration: 1000ms;
+}
+
+.u-section-2 .u-icon-1 {
+  animation-duration: 1000ms;
+  font-size: 1.5em;
+  background-image: none;
+}
+
+.u-section-2 .u-layout-cell-3 {
+  min-height: 315px;
+}
+
+.u-section-2 .u-container-layout-3 {
+  padding: 30px 60px;
+}
+
+.u-section-2 .u-text-3 {
+  margin: 52px 0 0;
+}
+
+.u-section-2 .u-text-4 {
+  line-height: 1;
+  margin: 20px 0 0;
+}
+
+.u-section-2 .u-btn-2 {
+  border-style: solid;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation-duration: 1000ms;
+  margin: 20px auto 0 0;
+}
+
+.u-section-2 .u-icon-2 {
+  animation-duration: 1000ms;
+  font-size: 1.5em;
+}
+
+.u-section-2 .u-layout-cell-4 {
+  min-height: 315px;
+}
+
+.u-section-2 .u-image-3 {
+  background-image: url("images/fuji-400-33.jpg");
+  background-position: 50% 100%;
+}
+
+.u-section-2 .u-container-layout-4 {
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  padding: 30px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 692px;
+  }
+
+  .u-section-2 .u-image-1 {
+    background-position: 50% 50%;
+    min-height: 260px;
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 260px;
+  }
+
+  .u-section-2 .u-layout-cell-3 {
+    min-height: 260px;
+  }
+
+  .u-section-2 .u-layout-cell-4 {
+    background-position: 50% 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 570px;
+  }
+
+  .u-section-2 .u-image-1 {
+    min-height: 199px;
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-2 .u-layout-cell-3 {
+    min-height: 100px;
+  }
+
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 970px;
+  }
+
+  .u-section-2 .u-image-1 {
+    min-height: 299px;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-container-layout-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 748px;
+  }
+
+  .u-section-2 .u-image-1 {
+    min-height: 188px;
+  }
+}
