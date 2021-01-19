@@ -4763,7 +4763,6 @@ a {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   background-color: transparent;
   color: inherit;
-  text-align: inherit;
   height: auto;
 }
 .u-form-horizontal label,
@@ -5477,6 +5476,9 @@ a {
   font-size: 1rem;
   height: auto !important;
 }
+.u-form-group {
+  text-align: start;
+}
 .u-btn-submit {
   display: inline-block;
 }
@@ -5502,7 +5504,7 @@ a {
     margin: -0.5rem !important;
   }
   .u-form-horizontal .u-form-group {
-    margin: 0.5rem !important;
+    border: 0.5rem solid transparent !important;
   }
   .u-form-horizontal label {
     display: none;
@@ -17907,10 +17909,8 @@ a.pswp__share--download:hover {
   justify-content: space-between;
 }
 .u-cart-blocks-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   position: relative;
 }
@@ -33471,7 +33471,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 /*end-variables sitestylecss*/
 .u-header .u-sheet-1 {
-  min-height: 20px;
+  min-height: 104px;
 }
 
 
