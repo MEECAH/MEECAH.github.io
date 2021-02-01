@@ -36,10 +36,15 @@
 }
 
 .u-section-1 .u-text-2 {
-  line-height: 1.4;
   width: 411px;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  line-height: 1.4;
+  background-image: none;
   margin: 21px auto 0;
+}
+
+.u-section-1 .u-btn-1 {
+  padding: 0;
 }
 
 @media (max-width: 767px) {
@@ -120,7 +125,7 @@
   font-weight: 700;
   text-transform: uppercase;
   animation-duration: 1000ms;
-  margin: 37px 116px 0 auto;
+  margin: 31px 116px 0 auto;
   padding: 10px 26px;
 }
 
@@ -171,7 +176,7 @@
   font-weight: 700;
   text-transform: uppercase;
   animation-duration: 1000ms;
-  margin: 20px auto 0 0;
+  margin: 31px auto 0 0;
   padding: 9px 10px;
 }
 
